@@ -21,8 +21,8 @@ partition=/dev/nvme0n1p2
 home=/dev/nvme0n1p3
 
 # format partitions
-mkfs.fat -F 32 $efipartition
-mkfs.ext4 -F $partition
+mkfs.fat -F 32 -n boot $efipartition
+mkfs.ext4 -F -L arch $partition
 
 # mount partitions
 mount $partition /mnt
