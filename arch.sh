@@ -16,9 +16,9 @@ loadkeys us
 timedatectl set-ntp true
 
 # partitioning
-efipartition=/dev/nvme0n1p5
-partition=/dev/nvme0n1p6
-home=/dev/nvme0n1p7
+efipartition=/dev/nvme0n1p1
+partition=/dev/nvme0n1p2
+home=/dev/nvme0n1p3
 
 # format partitions
 mkfs.fat -F 32 $efipartition
