@@ -24,6 +24,7 @@ swap=/dev/nvme0n1p4
 # format partitions
 mkfs.fat -F 32 -n boot $efipartition
 mkfs.ext4 -F -L arch $partition
+mkfs.ext4 -F -L anshul333y $home
 mkswap -L swap $swap
 swapon $swap
 
