@@ -100,10 +100,10 @@ pacman -S --noconfirm networkmanager dhcpcd bluez bluez-utils pipewire pipewire-
   kitty wl-clipboard nvim lazygit fzf ripgrep fd tmux nodejs npm docker
 
 # installing flatpak packages
-flatpak install flathub io.github.kolunmi.Bazaar
+flatpak install --noninteractive flathub io.github.kolunmi.Bazaar
 flatpak install --noninteractive flathub com.github.wwmm.easyeffects
-flatpak install flathub org.telegram.desktop
-flatpak install flathub com.discordapp.Discord
+flatpak install --noninteractive flathub org.telegram.desktop
+flatpak install --noninteractive flathub com.discordapp.Discord
 
 # enabling systemd services
 systemctl enable NetworkManager.service
