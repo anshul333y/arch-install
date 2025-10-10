@@ -19,10 +19,13 @@ timedatectl set-ntp true
 efipartition=/dev/nvme0n1p1
 partition=/dev/nvme0n1p2
 home=/dev/nvme0n1p3
+swap=/dev/nvme0n1p4
 
 # format partitions
 mkfs.fat -F 32 -n boot $efipartition
 mkfs.ext4 -F -L arch $partition
+mkswap -L swap $swap
+swapon $swap
 
 # mount partitions
 mount $partition /mnt
